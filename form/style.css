@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: lightgray;
+  margin: 0;
+  padding: 0;
+}
+
+/* page */
+.main {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* form container */
+.form-container {
+  border: 1px solid black;
+  background: white;
+  width: 500px;
+  padding: 0 40px 40px;
+}
+
+/* close button */
+.close-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn-wrapper button {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #8b8987;
+  transition: 0.2s;
+  position: relative;
+  left: 35px;
+}
+
+.close-btn-wrapper button:hover {
+  scale: 1.2;
+}
+
+.close-btn-wrapper button:active {
+  scale: 1;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* form title */
+h1 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+label,
+input {
+  display: block;
+}
+
+label {
+  margin: 20px 0;
+}
+
+input {
+  border-radius: 0;
+  border: 1px solid black;
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px 10px;
+}
+
+input:focus {
+  outline: 1px solid black;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 40px 0 0;
+}
+
+legend {
+  padding: 0;
+  font-weight: 600;
+}
+
+/* double inputs */
+fieldset > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  margin: -20px 0;
+}
+
+fieldset > div > label {
+  width: 50%;
+}
+
+/* form buttons */
+.form-btns-container {
+  margin-top: 20px;
+}
+
+#submit-btn,
+#reset-btn {
+  width: 160px;
+  padding: 15px 20px;
+  transition: 0.2s;
+  border-radius: 10px;
+  border: 1px solid black;
+  border-bottom-width: 3px;
+}
+
+#submit-btn {
+  background: black;
+  color: white;
+}
+
+#reset-btn {
+  background: white;
+  color: black;
+}
+
+#submit-btn:hover,
+#reset-btn:hover {
+  scale: 1.03;
+}
+
+#submit-btn:active,
+#reset-btn:active {
+  scale: 1;
+}
+
+/* removes arrows from input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

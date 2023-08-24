@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="form-container">
+        <div class="close-btn-wrapper">
+          <button>&#x2715;</button>
+        </div>
+        <!-- Title -->
+        <h1>Транспортные средства и водители</h1>
+        <!-- Form -->
+        <form id="form">
+          <!-- License number input -->
+          <label>
+            Гос-номер
+            <input
+              type="text"
+              placeholder="Укажите гос-номер"
+              name="license-number"
+              id="license-number"
+              pattern="^[АВЕКМНОРСТУХ]\d{3}(?<!000)[АВЕКМНОРСТУХ]{2}\d{2,3}$"
+              title="Введите гос-номер в следующем формате: СС001С34 или СС001С134"
+              required
+            />
+          </label>
+          <!-- Car model input -->
+          <label>
+            Транспортное средство
+            <input
+              type="text"
+              placeholder="Транспортное средство"
+              name="car-model"
+              id="car-model"
+              title="Введите марку и модель автомобиля"
+              required
+            />
+          </label>
+          <!-- Arrival date input -->
+          <label>
+            Ориентировочная дата прибытия к покупателю
+            <input
+              type="date"
+              placeholder="Дата*"
+              name="arrival-date"
+              id="arrival-date"
+              title="Введите ориентировочную дату прибытия к покупателю"
+              required
+          /></label>
+          <!-- Driver information -->
+          <fieldset>
+            <legend>Данные о водителе</legend>
+            <!-- Driver full name input -->
+            <label>
+              ФИО
+              <input
+                type="text"
+                placeholder="Укажите ФИО водителя"
+                name="name"
+                id="name"
+                minlength="2"
+                title="Введите полное имя"
+                required
+              />
+            </label>
+            <!-- Driver passport number input-->
+            <div>
+              <label>
+                Паспортные данные
+                <input
+                  type="text"
+                  placeholder="Серия"
+                  id="passport-serial"
+                  pattern="^(\d{4})(?<!0000)$"
+                  maxlength="4"
+                  title="Введите серию паспорта в следующем формате: 1234"
+                  required
+                />
+              </label>
+              <label>
+                <input
+                  type="text"
+                  placeholder="Номер"
+                  id="passport-number"
+                  pattern="^(\d{6})(?<!000000)$"
+                  maxlength="6"
+                  title="Введите номер паспорта в следующем формате: 123456"
+                  required
+              /></label>
+            </div>
+            <!-- Driver passport issue by input -->
+            <label>
+              Кем выдан
+              <input
+                type="text"
+                placeholder="Кем выдан"
+                name="issued-by"
+                id="issued-by"
+                title="Введите место выдачи паспорта"
+                required
+              />
+            </label>
+            <!-- Driver passport issue date input -->
+            <label>
+              Когда выдан
+              <input
+                type="text"
+                placeholder="Когда выдан"
+                name="issue-date"
+                id="issue-date"
+                pattern="^(0?[1-9]|[12]\d|3[01])[\.](0?[1-9]|1[0-2])[\.](19|20)\d{2}$"
+                title="Введите дату в следующем формате: 01.01.2021"
+                required
+            /></label>
+          </fieldset>
+          <!-- Form Buttons -->
+          <div class="form-btns-container">
+            <button type="submit" id="submit-btn">Отправить</button>
+            <button type="reset" id="reset-btn">Отменить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
